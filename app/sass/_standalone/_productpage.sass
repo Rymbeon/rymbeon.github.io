@@ -71,6 +71,11 @@
 	height: calc( 100vh - 275px )
 	display: flex 
 	align-items: center
+	&.ground_bottom
+		&::after
+			background-position: center 85%
+		&::before
+			background: linear-gradient(0deg,#fef5b4 15%,rgba(255,255,255,0) 15%)
 	.breadcrumbs 
 		margin-bottom: 32px
 		span 
