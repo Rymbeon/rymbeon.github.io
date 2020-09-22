@@ -95,15 +95,18 @@ header
 +media-breakpoint-down(lg)
 	header
 		padding: 24px 48px
-		nav 
-			ul 
-				li 
-					list-style: none
-					margin: 0 16px
-					&:first-of-type
-						margin-left: 0 
-					&:last-of-type
-						margin-right: 0
+		&>div
+			nav 
+				ul 
+					li 
+						list-style: none
+						margin: 0 8px
+						&:first-of-type
+							margin-left: 0 
+						&:last-of-type
+							margin-right: 0
+						a.buy_btn
+							padding: 10px 24px
 // ≥992px
 +media-breakpoint-down(md)
 	header
@@ -148,6 +151,24 @@ header
 								width: 100%
 								display: flex
 								justify-content: center
+								&.active_url
+									&::after
+										display: none
+								&::after
+									display: none
+								&:hover
+									&::after
+										display: none
+						a 
+							&.active_url
+								&::after
+									display: none
+							&::after
+								display: none
+							&:hover
+								&::after
+									display: none
+		.menu-mobile-triger
 		.menu-mobile-triger
 			display: block
 			cursor: pointer

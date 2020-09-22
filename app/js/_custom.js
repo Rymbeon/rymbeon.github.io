@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		speed: 300,
 		slidesToShow: 2,
 		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		slidesToScroll: 2,
 		prevArrow: leftArrowblack,
 		nextArrow: rightArrowblack,
 		responsive: [
@@ -52,11 +55,25 @@ document.addEventListener("DOMContentLoaded", function () {
 				breakpoint: 1024,
 				settings: {
 					arrows: false
+				},
+				breakpoint: 556,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false
 				}
 			},
 		]
 	});
-
+	$('.section-head_holder').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 3000
+	});
 
 
 

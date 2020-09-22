@@ -52,7 +52,7 @@
 		content: ""
 		height: 100%
 		background: linear-gradient(0deg, rgba(254,245,180,1) 30%, rgba(255,255,255,0) 30%)
-.ground_bottom_brown
+.brown
 	position: relative
 	z-index: 0
 	&.fix_block
@@ -218,7 +218,7 @@
 				height: 56px
 .mp-about
 	background: rgba(254,245,180,1) 
-	padding: 100px 0 178px
+	padding: 100px 0 160px
 	h2 
 		font-family: Montserrat
 		font-style: normal
@@ -281,7 +281,7 @@
 				margin-left: 8px
 .mp-partners 
 	background: #672F12
-	padding: 150px 0
+	padding: 160px 0 100px
 	h2 
 		font-family: Montserrat
 		font-style: normal
@@ -305,6 +305,7 @@
 			margin: 0 32px
 .abp-heroimg 
 	background: #672F12
+	padding-bottom: 100px
 	img 
 		width: 100%
 .abp-content
@@ -365,7 +366,6 @@
 		margin-bottom: 56px
 		color: #672F12
 	&-item
-		
 		border-radius: 8px
 		padding: 56px
 		&.dark_b
@@ -401,7 +401,7 @@
 				margin-bottom: 0
 .abp-contact 
 	background: rgba(254,245,180,1) 
-	padding: 120px 0
+	padding: 100px 0
 	.contact_holder
 		margin-bottom: 64px 
 		&:last-of-type
@@ -453,7 +453,7 @@
 			color: #672F12
 .mp-feedback
 	background: #672F12
-	padding: 120px 0
+	padding: 100px 0
 	h2 
 		font-family: Montserrat
 		font-style: normal
@@ -754,8 +754,18 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+	.abp-heroimg
+		padding-bottom: 80px
+	.abp-content
+		padding: 80px 0
+	.abp-tiles
+		padding: 80px 0
+		h2 
+			font-size: 32px
+	.section-head-page
+		padding: 80px 0 0
 	.mp-product 
-		padding: 40px
+		padding: 80px 0
 		background: #672F12
 		h2 
 			font-family: Montserrat
@@ -782,14 +792,18 @@
 				img 
 					width: 100%
 					height: auto
-				div 
-					padding: 24px 16px
+				&>div 
+					padding: 24px 24px
+					min-height: 208px
+					&>div
+						min-height: 104px
+						max-height: 104px
 					span 
 						font-family: Montserrat
 						font-style: normal
 						font-weight: 600
-						font-size: 24px
-						line-height: 29px
+						font-size: 20px
+						line-height: 24px
 						display: flex
 						align-items: center
 						color: #672F12
@@ -840,7 +854,7 @@
 					height: 56px
 	.mp-about
 		background: rgba(254,245,180,1) 
-		padding: 56px 0 80px
+		padding: 80px 0
 		h2 
 			font-family: Montserrat
 			font-style: normal
@@ -901,8 +915,13 @@
 				color: #672F12
 				svg 
 					margin-left: 8px
+	.mp-partners 
+		padding: 80px 0
+	.mp-feedback 
+		padding: 80px 0
+
 	.mp-form 
-		padding: 60px 0
+		padding: 80px 0
 	.section_holder_form 
 		.form_holder 
 			display: flex
@@ -1023,6 +1042,12 @@
 								transition: 0.2s
 // ≥992px
 +media-breakpoint-down(md)
+	.abp-contact .contact_map img
+		margin-bottom: 16px
+	.section-head-page h1
+		font-size: 32px
+		br
+			display: none
 	.mp-product 
 		padding: 40px
 		background: #672F12
@@ -1053,7 +1078,7 @@
 				img 
 					width: 100%
 					height: auto
-				div 
+				&>div 
 					padding: 24px 16px
 					span 
 						font-family: Montserrat
@@ -1115,9 +1140,13 @@
 
 		.about_back 
 			background-image: url(../img/about.png)
-			background-position: center top 
-			background-size: 75% 
+			background-position: left top 
+			background-size: 70% 
 			background-repeat: no-repeat
+			.about_text
+				padding: 48px
+			h4 
+				font-size: 24px
 	.mp-partners 
 		background: #672F12
 		padding: 80px 0
@@ -1125,7 +1154,7 @@
 			font-family: Montserrat
 			font-style: normal
 			font-weight: bold
-			font-size: 40px
+			font-size: 32px
 			line-height: 120%
 			display: flex
 			align-items: center
@@ -1140,9 +1169,15 @@
 			justify-content: center
 			width: 100%
 			flex-wrap: wrap
+			div
+				width: 25%
+				display: flex
+				justify-content: center	
+				padding: 0 16px
 			img 
-				height: 48px
-				margin: 8px 16px	
+				height: auto
+				margin: 8px 0	
+				width: 100%
 	.mp-form 
 		padding: 60px 0
 	.section_holder_form 
@@ -1264,18 +1299,25 @@
 								background: rgba(103, 47, 18, 0)
 								border-radius: 2px
 								transition: 0.2s
-// ≥768px
-+media-breakpoint-down(sm)
-
-// ≥576px
-+media-breakpoint-down(xs)
-	.abp-heroimg 
-	background: #672F12
-	img 
-		width: 100%
-	.abp-content
+	.abp-tiles
 		background: rgba(254,245,180,1) 
-		padding: 40px 0
+		padding: 80px 0
+		.back_cover
+			background-image: url(../img/about.png)
+			background-size: 70%
+			background-repeat: no-repeat
+			&.rb_cover
+				background-position: right bottom
+				padding-bottom: 200px
+			&.lt_cover
+				background-position: left top
+				padding-top: 200px
+			&.lb_cover
+				background-position: left bottom
+				padding-bottom: 200px
+			&.rt_cover
+				background-position: right top
+				padding-top: 200px
 		h2 
 			font-family: Montserrat
 			font-style: normal
@@ -1289,52 +1331,9 @@
 			justify-content: center
 			margin-bottom: 56px
 			color: #672F12
-		p 
-			font-family: Montserrat
-			font-style: normal
-			font-weight: normal
-			font-size: 18px
-			line-height: 140%
-			display: flex
-			align-items: center
-			color: #672F12
-	.abp-tiles
-		background: rgba(254,245,180,1) 
-		padding: 40px 0
-		.back_cover
-			background-image: url(../img/about.png)
-			background-size: 100%
-			background-repeat: no-repeat
-			background: none
-			&.rb_cover
-				background-position: right bottom
-				padding-bottom: 0px
-			&.lt_cover
-				background-position: left top
-				padding-top: 00px
-			&.lb_cover
-				background-position: left bottom
-				padding-bottom: 0px
-			&.rt_cover
-				background-position: right top
-				padding-top: 0px
-		h2 
-			font-family: Montserrat
-			font-style: normal
-			font-weight: bold
-			font-size: 32px
-			line-height: 120%
-			display: flex
-			align-items: center
-			text-align: center
-			width: 100%
-			justify-content: center
-			margin-bottom: 24px
-			color: #672F12
 		&-item
-			
 			border-radius: 8px
-			padding: 16px
+			padding: 48px
 			&.dark_b
 				background: #672F12
 				p,
@@ -1358,7 +1357,115 @@
 				font-family: Montserrat
 				font-style: normal
 				font-weight: normal
-				font-size: 16px
+				font-size: 14px
+				line-height: 140%
+				display: flex
+				align-items: center
+				margin: 0
+				margin-bottom: 16px 
+				&:last-of-type
+					margin-bottom: 0
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+	.abp-heroimg 
+		background: #672F12
+		padding-bottom: 64px
+	img 
+		width: 100%
+	.abp-content
+		background: rgba(254,245,180,1) 
+		padding: 64px 0
+		h2 
+			font-family: Montserrat
+			font-style: normal
+			font-weight: bold
+			font-size: 32px
+			line-height: 120%
+			display: flex
+			align-items: center
+			text-align: center
+			width: 100%
+			justify-content: center
+			margin-bottom: 32px
+			color: #672F12
+		p 
+			padding: 0 16px
+			font-family: Montserrat
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 140%
+			display: flex
+			align-items: center
+			color: #672F12
+	.abp-tiles
+		background: rgba(254,245,180,1) 
+		padding: 64px 0
+		.back_cover
+			background-image: url(../img/about.png)
+			background-size: 100%
+			background-repeat: no-repeat
+			&.rb_cover
+				background-position: center top
+				padding-bottom: 0
+				padding-top: 320px
+			&.lt_cover
+				background-position: center top
+				padding-bottom: 0
+				padding-top: 320px
+			&.lb_cover
+				background-position: center top
+				padding-bottom: 0
+				padding-top: 320px
+			&.rt_cover
+				background-position: center top
+				padding-bottom: 0
+				padding-top: 320px
+		h2 
+			font-family: Montserrat
+			font-style: normal
+			font-weight: bold
+			font-size: 24px
+			line-height: 120%
+			display: flex
+			align-items: center
+			text-align: center
+			width: 100%
+			justify-content: center
+			margin-bottom: 24px
+			color: #672F12
+			padding: 0 24px
+		&-item
+			
+			border-radius: 8px
+			padding: 24px
+			&.dark_b
+				background: #672F12
+				p,
+				h4 
+					color: #FFFFFF
+			&.light_b
+				background: #FFFFFF
+				p,
+				h4 
+					color: #672F12
+			h4 
+				font-family: Montserrat
+				font-style: normal
+				font-weight: 600
+				font-size: 24px
+				line-height: 130%
+				display: flex
+				align-items: center
+				margin-bottom: 24px
+			p
+				font-family: Montserrat
+				font-style: normal
+				font-weight: normal
+				font-size: 14px
 				line-height: 140%
 				display: flex
 				align-items: center
@@ -1381,6 +1488,7 @@
 			width: 100%
 			justify-content: center
 			margin-bottom: 16px
+			padding: 0 24px
 		p 
 			font-family: Montserrat
 			font-style: normal
@@ -1391,9 +1499,10 @@
 			align-items: center
 			text-align: center
 			color: #FFFFFF
-			margin: 24px 0 0
+			margin: 24px 0 16px
+			padding: 0 24px
 	.mp-product 
-		padding: 32px 16PX
+		padding: 64px 16PX
 		background: #672F12
 		h2 
 			font-family: Montserrat
@@ -1422,7 +1531,7 @@
 				img 
 					width: 100%
 					height: auto
-				div 
+				&>div 
 					padding: 24px 16px
 					span 
 						font-family: Montserrat
@@ -1480,7 +1589,7 @@
 					height: 56px
 	.mp-about
 		background: rgba(254,245,180,1) 
-		padding: 32px 0 32px
+		padding: 64px 0 
 		h2 
 			font-family: Montserrat
 			font-style: normal
@@ -1541,7 +1650,7 @@
 					margin-left: 8px
 	.mp-partners 
 		background: #672F12
-		padding: 56px 0
+		padding: 64px 0
 		h2 
 			font-family: Montserrat
 			font-style: normal
@@ -1565,7 +1674,6 @@
 				display: flex 
 				justify-content: center
 				img 
-					height: 48px
 					margin: 16px 0
 	.mp-feedback
 		background: #672F12
@@ -1649,7 +1757,7 @@
 					align-items: center
 					color: #672F12
 	.mp-form 
-		padding: 40px 0
+		padding: 64px 0
 	.section_holder_form 
 		.form_holder 
 			display: flex
@@ -1769,6 +1877,30 @@
 								background: rgba(103, 47, 18, 0)
 								border-radius: 2px
 								transition: 0.2s
+@media ( max-width: 340px )
+	.abp-tiles
+		background: rgba(254,245,180,1) 
+		padding: 64px 0
+		.back_cover
+			background-image: url(../img/about.png)
+			background-size: 100%
+			background-repeat: no-repeat
+			&.rb_cover
+				background-position: center top
+				padding-bottom: 0
+				padding-top: 240px
+			&.lt_cover
+				background-position: center top
+				padding-bottom: 0
+				padding-top: 240px
+			&.lb_cover
+				background-position: center top
+				padding-bottom: 0
+				padding-top: 240px
+			&.rt_cover
+				background-position: center top
+				padding-bottom: 0
+				padding-top: 240px
 /*==========  Mobile First  ==========*/
 
 // ≤576px

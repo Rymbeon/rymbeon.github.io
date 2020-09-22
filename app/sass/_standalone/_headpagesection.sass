@@ -44,7 +44,9 @@
 
 // ≥992px
 +media-breakpoint-down(md)
-
+	.section-head h1
+		font-size: 32px
+		line-height: 48px
 // ≥768px
 +media-breakpoint-down(sm)
 	.section-head
@@ -53,7 +55,7 @@
 		h1
 			font-family: Montserrat
 			font-style: normal
-			font-weight: 200
+			font-weight: 700
 			font-size: 32px
 			line-height: 48px
 			display: flex
@@ -63,10 +65,12 @@
 			letter-spacing: -0.02em
 			color: #FFFFFF
 			margin-bottom: 24px
+			br 
+				display: none
 		p
 			font-family: Montserrat
 			font-style: normal
-			font-weight: bold
+			font-weight: 500
 			font-size: 14px
 			line-height: 24px
 			display: flex
