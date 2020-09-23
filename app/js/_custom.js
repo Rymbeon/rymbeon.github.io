@@ -14,6 +14,20 @@ document.addEventListener("DOMContentLoaded", function () {
 			$('body').css('overflow', 'hidden ');
 		}
 	});
+
+	$('body').on('click', '.buy_btn', function (event) {
+
+		$('.popup#PriceForm').css('display', 'flex');
+		$('.popup#PriceForm').fadeTo(200, 1);
+	});
+	$('body').on('click', '.close', function (event) {
+		event.preventDefault();
+		$('.popup').fadeTo(200, 0);
+		setTimeout(()=>{
+			$('.popup').css('display', 'none');
+		},200)
+	});
+
 	$('input[name="tel"]').inputmask({ "mask": "+380(99)999 99 99" });
 
 
@@ -74,8 +88,21 @@ document.addEventListener("DOMContentLoaded", function () {
 		autoplay: true,
 		autoplaySpeed: 3000
 	});
+	
+	$('body').on('click', '.menu-mobile-triger', function (event) {
 
-
+		if ($(this).hasClass('open')) {
+			$('nav').hide('fast');
+			$(this).removeClass('open');
+			$('header').removeClass('color');
+			$('body').css('overflow', 'auto');
+		} else {
+			$('nav').show('fast');
+			$(this).addClass('open');
+			$('header').addClass('color')
+			$('body').css('overflow', 'hidden ');
+		}
+	});
 
 });
 
@@ -123,3 +150,98 @@ var delLink = '<a href="#" class="clean">Видалити</a>';
 		});
 	});
 }(document, window, 0));
+
+jQuery('.form_holder.Price form').on('submit', function(e) {
+	e.preventDefault();
+	jQuery('.form_holder.Price input[type="submit"]').prop('disabled', true);
+
+	var formData = JSON.stringify(jQuery(this).serializeArray());
+	console.log(formData)
+	fullName = jQuery(this).serializeArray()[0].value;
+	phone = jQuery(this).serializeArray()[1].value;
+	email = jQuery(this).serializeArray()[2].value;
+	company = jQuery(this).serializeArray()[3].value;
+	city = jQuery(this).serializeArray()[4].value;
+	jQuery.ajax({
+		type: 'POST',
+		url: "http://1826914.hm398848.web.hosting-test.net/api/priceForm",
+		data: {
+			"fullName": fullName,
+			"phone": phone,
+			"email": email,
+			"company": company,
+			"city": city
+		},
+		success: function (data) {
+			console.log("SUCCESS: new");
+			$('.popup#successPrice').css('display', 'flex');
+			$('.popup#successPrice').fadeTo(200, 1);
+			$('.popup#PriceForm').fadeTo(200, 0);
+			setTimeout(()=>{
+				$('.popup#PriceForm').css('display', 'none');
+			},200)
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			
+		}
+	});
+});
+
+
+jQuery('.form_holder.File form').on('submit', function(e) {
+	e.preventDefault();
+	jQuery('.form_holder.File input[type="submit"]').prop('disabled', true);
+
+	var formData = JSON.stringify(jQuery(this).serializeArray());
+	console.log(formData)
+	fullName = jQuery(this).serializeArray()[0].value;
+	phone = jQuery(this).serializeArray()[1].value;
+	message = jQuery(this).serializeArray()[2].value;
+	file = jQuery(this).serializeArray()[3].file;
+	jQuery.ajax({
+		type: 'POST',
+		url: "http://1826914.hm398848.web.hosting-test.net/api/sendCommercialPrice",
+		data: {
+			"fullName": fullName,
+			"phone": phone,
+			"message": message,
+			"file": file
+		},
+		success: function (data) {
+			console.log("SUCCESS: new");
+			$('.popup#successFile').css('display', 'flex');
+			$('.popup#successFile').fadeTo(200, 1);
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			
+		}
+	});
+});
+
+jQuery('.form_holder.Messg form').on('submit', function(e) {
+	e.preventDefault();
+	jQuery('.form_holder.Messg input[type="submit"]').prop('disabled', true);
+
+	var formData = JSON.stringify(jQuery(this).serializeArray());
+	console.log(formData)
+	fullName = jQuery(this).serializeArray()[0].value;
+	phone = jQuery(this).serializeArray()[1].value;
+	message = jQuery(this).serializeArray()[2].value;
+	jQuery.ajax({
+		type: 'POST',
+		url: "http://1826914.hm398848.web.hosting-test.net/api/faqForm",
+		data: {
+			"fullName": fullName,
+			"phone": phone,
+			"message": message
+		},
+		success: function (data) {
+			console.log("SUCCESS: new");
+			$('.popup#successMes').css('display', 'flex');
+			$('.popup#successMes').fadeTo(200, 1);
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			
+		}
+	});
+});

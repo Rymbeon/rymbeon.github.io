@@ -7,7 +7,9 @@
 	background: rgba(77, 35, 13, 0.8)
 	backdrop-filter: blur(8px)
 	z-index: 99999999
-	display: flex 
+	display: none
+	opacity: 0
+	transition: 0.2s 
 	align-items: center
 	justify-content: center
 	&_holder
@@ -17,10 +19,59 @@
 		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.12)
 		border-radius: 8px
 		position: relative
+		&.suc
+			background: #FEF5B4
+			max-width: 736px
 		.close
 			position: absolute
 			top: 24px
 			right: 24px
+		.succes_Send
+			min-height: 400px
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			h4 
+				font-family: Montserrat
+				font-style: normal
+				font-weight: 600
+				font-size: 32px
+				line-height: 130%
+				display: flex
+				align-items: center
+				text-align: center
+				color: #672F12
+				margin-bottom: 16px
+			p 
+				font-family: Montserrat
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 140%
+				display: flex
+				align-items: center
+				text-align: center
+				color: #672F12
+				margin-bottom: 56px
+				max-width: 608px
+			a
+				border: 2px solid #672F12
+				box-sizing: border-box
+				border-radius: 4px
+				height: 40px
+				width: 160px
+				font-family: Montserrat
+				font-style: normal
+				font-weight: 600
+				font-size: 16px
+				line-height: 20px
+				display: flex
+				align-items: center
+				justify-content: center
+				color: #672F12
+				position: static
+
 		.form_holder 
 			display: flex
 			background: #FFFFFF
@@ -215,7 +266,6 @@
 		background: rgba(77, 35, 13, 0.8)
 		backdrop-filter: blur(8px)
 		z-index: 99999999
-		display: flex 
 		align-items: center
 		justify-content: center
 		&_holder
@@ -357,7 +407,6 @@
 		background: rgba(77, 35, 13, 0.8)
 		backdrop-filter: blur(8px)
 		z-index: 99999999
-		display: flex 
 		align-items: center
 		justify-content: center
 		padding: 16px
@@ -500,7 +549,6 @@
 		background: rgba(77, 35, 13, 0.8)
 		backdrop-filter: blur(8px)
 		z-index: 99999999
-		display: flex 
 		align-items: center
 		justify-content: center
 		&_holder
@@ -525,7 +573,6 @@
 		background: rgba(77, 35, 13, 0.8)
 		backdrop-filter: blur(8px)
 		z-index: 99999999
-		display: flex 
 		align-items: center
 		justify-content: center
 		&_holder

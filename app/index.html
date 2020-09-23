@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<div class="popup">
+	<div class="popup" id="PriceForm">
 		<div class="popup_holder">
 			<a href="#" class="close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g opacity="0.4" clip-path="url(#clip0)">
@@ -32,7 +32,7 @@
 				</defs>
 				</svg>
 				</a>
-			<div class="form_holder">
+			<div class="form_holder Price">
 				<img src="img/06_form/01_envelope.png" alt="/">
 				<div>
 					<h3>
@@ -42,18 +42,45 @@
 						Заповніть цю форму щоб отримати прайс на нашу продукцію
 					</p>
 					<form>
-						<input type="text" placeholder="ПІБ*" required='required'>
-						<input type="tel" placeholder="Номер телефону*" required='required'>
-						<input type="email" placeholder="Email*" required='required'>
-						<input type="text" placeholder="Компанія*" required='required'>
-						<input type="text" placeholder="Місто*" required='required'>
+						<input type="text" name="fullName" placeholder="ПІБ*" required='required'>
+						<input type="tel" name="phone" placeholder="Номер телефону*" required='required'>
+						<input type="email" placeholder="Email*" name="email" required='required'>
+						<input type="text" placeholder="Компанія*" name="company" required='required'>
+						<input type="text" placeholder="Місто*" name="city" required='required'>
 						<button type="submit">Отримати прайс</button>
-						<label> Даю згоду на обробку персональних даних
-							<input type="checkbox" name="agree" required='required'>
+						<label> Підтверджую згоду з <a href="/policy.html" target="_blank" style="text-decoration: underline; margin-left: 4px;">політикою конфіденційноості</a>
+							<input type="checkbox" required='required'>
 							<span></span>
 						</label>
 					</form>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="successPrice">
+		<div class="popup_holder suc">
+			<a href="#" class="close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g opacity="0.4" clip-path="url(#clip0)">
+				<path d="M23.7166 0.284445C23.3379 -0.094164 22.7241 -0.094164 22.3455 0.284445L0.284445 22.3455C-0.0941641 22.7241 -0.0941641 23.3379 0.284445 23.7165C0.473727 23.9059 0.721883 24.0005 0.969992 24.0005C1.2181 24.0005 1.46621 23.9058 1.65554 23.7165L23.7166 1.65544C24.0951 1.27688 24.0951 0.663054 23.7166 0.284445Z" fill="#672F12"/>
+				<path d="M23.716 22.3455L1.65496 0.284445C1.27639 -0.0941641 0.66252 -0.0941641 0.283957 0.284445C-0.0946523 0.663008 -0.0946523 1.27684 0.283957 1.65545L22.345 23.7165C22.5343 23.9058 22.7825 24.0005 23.0306 24.0005C23.2787 24.0005 23.5268 23.9058 23.7161 23.7166C24.0946 23.3379 24.0946 22.7241 23.716 22.3455Z" fill="#672F12"/>
+				</g>
+				<defs>
+				<clipPath id="clip0">
+				<rect width="24" height="24" fill="white"/>
+				</clipPath>
+				</defs>
+				</svg>
+			</a>
+			<div class="succes_Send">
+				<h4>
+					Заявку прийнято!
+				</h4>
+				<p>
+					Найближчим часом вам на електронну пошту надійде наш прайс. Якщо ви не бачите нашого листа, будь ласка, перевірте усі розділи, включаючи «Спам». Іноді листи можуть потрапляти і туди.
+				</p>
+				<a href="#" class="close">
+					Зрозуміло
+				</a>
 			</div>
 		</div>
 	</div>
@@ -170,7 +197,7 @@
 		</section>
 	</div>
 
-	<section class="mp-product ">
+	<section class="mp-product back_y_b">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -246,7 +273,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="mp-about">
+	<section class="mp-about back_b_b">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -256,7 +283,7 @@
 				</div>
 			</div>
 			<div class="row about_back" style="background-image: url(img/01_main/about.png);">
-				<div class="col-md-8 offset-md-4 lg-6 offset-lg-6 about_text">
+				<div class="col-md-8 offset-md-4 col-lg-6 offset-lg-6 about_text">
 					<h4>
 						Займаємося справою, якою ми пишаємося
 					</h4>
@@ -366,11 +393,11 @@
 			</div>
 		</div>
 	</section> -->
-	<section class="section_holder_form mp-form ">
+	<section class="section_holder_form mp-form back_y_bb">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<div class="form_holder">
+					<div class="form_holder Price">
 						<img src="img/06_form/01_envelope.png" alt="/">
 						<div>
 							<h3>
@@ -380,14 +407,14 @@
 								Заповніть цю форму щоб отримати прайс на нашу продукцію
 							</p>
 							<form>
-								<input type="text" placeholder="ПІБ*" required='required'>
-								<input type="tel" placeholder="Номер телефону*" required='required'>
-								<input type="email" placeholder="Email*" required='required'>
-								<input type="text" placeholder="Компанія*" required='required'>
-								<input type="text" placeholder="Місто*" required='required'>
+								<input type="text" name="fullName" placeholder="ПІБ*" required='required'>
+								<input type="tel" name="phone" placeholder="Номер телефону*" required='required'>
+								<input type="email" placeholder="Email*" name="email" required='required'>
+								<input type="text" placeholder="Компанія*" name="company" required='required'>
+								<input type="text" placeholder="Місто*" name="city" required='required'>
 								<button type="submit">Отримати прайс</button>
-								<label> Даю згоду на обробку персональних даних
-									<input type="checkbox" name="agree" required='required'>
+								<label> Підтверджую згоду з <a href="/policy.html" target="_blank" style="text-decoration: underline; margin-left: 4px;">політикою конфіденційноості</a>
+									<input type="checkbox" required='required'>
 									<span></span>
 								</label>
 							</form>
@@ -435,8 +462,7 @@
 			</div>
 			<div class="footer_right">
 				<p>©2020 Volhov LTD</p>
-				<a href="javascript: void(0)">Privacy Policy</a>
-				<a href="javascript: void(0)">Terms of Service</a>
+				<a href="/policy.html">Політика конфіденційноості</a>
 			</div>
 
 		</div>
