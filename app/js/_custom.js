@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		slidesToScroll: 2,
 		prevArrow: leftArrowblack,
 		nextArrow: rightArrowblack,
-		pauseOnHover: false,
 		responsive: [
 			{
 				breakpoint: 1024,
@@ -85,6 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		infinite: true,
 		speed: 300,
 		slidesToShow: 1,
+		pauseOnHover: false,
+		pauseOnFocus: false,
 		arrows: false,
 		autoplay: true,
 		autoplaySpeed: 3000
