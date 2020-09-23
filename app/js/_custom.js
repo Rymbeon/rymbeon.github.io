@@ -11,20 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
 			$('nav').show('fast');
 			$(this).addClass('open');
 			$('header').addClass('color')
-			$('body').css('overflow', 'hidden ');
+			$('body').css('overflow-y', 'hidden ');
 		}
 	});
 
 	$('body').on('click', '.buy_btn', function (event) {
-
 		$('.popup#PriceForm').css('display', 'flex');
 		$('.popup#PriceForm').fadeTo(200, 1);
+		$('body').css('overflow', 'hidden');
 	});
 	$('body').on('click', '.close', function (event) {
 		event.preventDefault();
 		$('.popup').fadeTo(200, 0);
 		setTimeout(()=>{
 			$('.popup').css('display', 'none');
+			$('body').css('overflow-y', 'auto');
 		},200)
 	});
 
