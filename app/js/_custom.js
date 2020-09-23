@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		slidesToScroll: 2,
 		prevArrow: leftArrowblack,
 		nextArrow: rightArrowblack,
+		pauseOnHover: false,
 		responsive: [
 			{
 				breakpoint: 1024,
