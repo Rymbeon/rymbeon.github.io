@@ -82,13 +82,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	$('.section-head_holder').slick({
 		dots: false,
 		infinite: true,
-		speed: 300,
+		speed: 600,
 		slidesToShow: 1,
 		pauseOnHover: false,
 		pauseOnFocus: false,
 		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 3000
+		autoplaySpeed: 8000
 	});
 	
 
