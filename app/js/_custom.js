@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	$('.slick_feedback').slick({
 		dots: true,
 		infinite: true,
-		speed: 300,
+		speed: 400,
 		slidesToShow: 1,
 		arrows: true,
 		prevArrow: leftArrow,
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		slidesToShow: 2,
 		arrows: true,
 		autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 6000,
 		slidesToScroll: 2,
 		prevArrow: leftArrowblack,
 		nextArrow: rightArrowblack,
@@ -89,20 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		autoplaySpeed: 3000
 	});
 	
-	$('body').on('click', '.menu-mobile-triger', function (event) {
 
-		if ($(this).hasClass('open')) {
-			$('nav').hide('fast');
-			$(this).removeClass('open');
-			$('header').removeClass('color');
-			$('body').css('overflow', 'auto');
-		} else {
-			$('nav').show('fast');
-			$(this).addClass('open');
-			$('header').addClass('color')
-			$('body').css('overflow', 'hidden ');
-		}
-	});
 
 });
 
