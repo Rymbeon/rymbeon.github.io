@@ -154,8 +154,9 @@ jQuery('.form_holder.Price form').on('submit', function(e) {
 	city = jQuery(this).serializeArray()[4].value;
 	jQuery.ajax({
 		type: 'POST',
-		url: "http://1826914.hm398848.web.hosting-test.net/api/priceForm",
+		url: "https://api.volhov-ltd.com.ua/api/priceForm",
 		data: {
+
 			"fullName": fullName,
 			"phone": phone,
 			"email": email,
@@ -181,22 +182,21 @@ jQuery('.form_holder.Price form').on('submit', function(e) {
 jQuery('.form_holder.File form').on('submit', function(e) {
 	e.preventDefault();
 	jQuery('.form_holder.File input[type="submit"]').prop('disabled', true);
+	var formData = new FormData(this);
+	// var formData = JSON.stringify(jQuery(this).serializeArray());
+	 console.log(formData)
+	// fullName = jQuery(this).serializeArray()[0].value;
+	// phone = jQuery(this).serializeArray()[1].value;
+	// message = jQuery(this).serializeArray()[2].value;
+	// file = $('#fileInput')[0].files[0];
 
-	var formData = JSON.stringify(jQuery(this).serializeArray());
-	console.log(formData)
-	fullName = jQuery(this).serializeArray()[0].value;
-	phone = jQuery(this).serializeArray()[1].value;
-	message = jQuery(this).serializeArray()[2].value;
-	file = jQuery(this).serializeArray()[3].file;
 	jQuery.ajax({
 		type: 'POST',
-		url: "http://1826914.hm398848.web.hosting-test.net/api/sendCommercialPrice",
-		data: {
-			"fullName": fullName,
-			"phone": phone,
-			"message": message,
-			"file": file
-		},
+		cache: false,
+		contentType: false,
+		processData: false,
+		url: "https://api.volhov-ltd.com.ua/api/sendCommercialPrice",
+		data: formData,
 		success: function (data) {
 			console.log("SUCCESS: new");
 			$('.popup#successFile').css('display', 'flex');
@@ -219,7 +219,7 @@ jQuery('.form_holder.Messg form').on('submit', function(e) {
 	message = jQuery(this).serializeArray()[2].value;
 	jQuery.ajax({
 		type: 'POST',
-		url: "http://1826914.hm398848.web.hosting-test.net/api/faqForm",
+		url: "https://api.volhov-ltd.com.ua/api/faqForm",
 		data: {
 			"fullName": fullName,
 			"phone": phone,

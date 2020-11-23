@@ -9,7 +9,7 @@
 	"author": "WebDesign Master",
 	"license": "ISC",
 	"devDependencies": {
-		"bootstrap": "^4.4.1",
+		"bootstrap": "^4.5.2",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
 		"gulp": "^4.0.2",
@@ -26,6 +26,9 @@
 		"jquery": "^3.4.1"
 	},
 	"dependencies": {
+		"ajv": "^6.12.5",
+		"chokidar": "^3.4.2",
+		"popper.js": "^1.16.1",
 		"slick-carousel": "^1.8.1"
 	}
 }
