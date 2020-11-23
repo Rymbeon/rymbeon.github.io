@@ -45,7 +45,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXR6TQD"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<div class="popup" id="PriceForm">
+	<div class="popup" id="MesForm">
 		<div class="popup_holder">
 			<a href="#" class="close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g opacity="0.4" clip-path="url(#clip0)">
@@ -59,28 +59,56 @@
 				</defs>
 				</svg>
 				</a>
-			<div class="form_holder Price">
-				<img src="img/06_form/01_envelope.png" alt="/">
-				<div>
-					<h3>
-						Отримати прайс
-					</h3>
-					<p>
-						Заповніть цю форму щоб отримати прайс на нашу продукцію
-					</p>
-					<form>
-						<input type="text" name="fullName" placeholder="ПІБ*" required='required'>
-						<input type="tel" name="phone" placeholder="Номер телефону*" required='required'>
-						<input type="email" placeholder="Email*" name="email" required='required'>
-						<input type="text" placeholder="Компанія*" name="company" required='required'>
-						<input type="text" placeholder="Місто*" name="city" required='required'>
-						<button type="submit">Отримати прайс</button>
-						<label> Підтверджую згоду з <a href="/policy.html" target="_blank" style="text-decoration: underline; margin-left: 4px;">політикою конфіденційноості</a>
-							<input type="checkbox" required='required'>
-							<span></span>
-						</label>
-					</form>
+				<div class="form_holder Messg">
+					<img src="img/06_form/01_envelope.png" alt="/">
+					<div>
+						<h3>
+							Маєте питання?
+						</h3>
+						<p>
+							Заповніть цю форму. Ми розглянемо ваше питання та зв'яжемося з вами
+						</p>
+						<form>
+							<input type="text" placeholder="П.І.Б.*" name="fullName" required='required'>
+							<input type="tel" placeholder="Номер телефону*" name="phone" required='required'>
+							<textarea required='required' rows="5" placeholder="Коментар" name="message"></textarea>
+							<button type="submit">Надіслати</button>
+							<label> Підтверджую згоду з <a href="/policy.html" target="_blank" style="text-decoration: underline; margin-left: 4px;">політикою конфіденційноості</a>
+								<input type="checkbox" name="agree" required='required'>
+								<span></span>
+							</label>
+						</form>
+						<div class="after_form">
+							<a href="tel:+380503002302">+380 (50) 300 23 02</a>
+							<a href="mailto:info@volhov-ltd.com.ua">info@volhov-ltd.com.ua</a>
+						</div>
+					</div>
 				</div>
+		</div>
+	</div><div class="popup" id="successMes">
+		<div class="popup_holder suc">
+			<a href="#" class="close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g opacity="0.4" clip-path="url(#clip0)">
+				<path d="M23.7166 0.284445C23.3379 -0.094164 22.7241 -0.094164 22.3455 0.284445L0.284445 22.3455C-0.0941641 22.7241 -0.0941641 23.3379 0.284445 23.7165C0.473727 23.9059 0.721883 24.0005 0.969992 24.0005C1.2181 24.0005 1.46621 23.9058 1.65554 23.7165L23.7166 1.65544C24.0951 1.27688 24.0951 0.663054 23.7166 0.284445Z" fill="#672F12"/>
+				<path d="M23.716 22.3455L1.65496 0.284445C1.27639 -0.0941641 0.66252 -0.0941641 0.283957 0.284445C-0.0946523 0.663008 -0.0946523 1.27684 0.283957 1.65545L22.345 23.7165C22.5343 23.9058 22.7825 24.0005 23.0306 24.0005C23.2787 24.0005 23.5268 23.9058 23.7161 23.7166C24.0946 23.3379 24.0946 22.7241 23.716 22.3455Z" fill="#672F12"/>
+				</g>
+				<defs>
+				<clipPath id="clip0">
+				<rect width="24" height="24" fill="white"/>
+				</clipPath>
+				</defs>
+				</svg>
+			</a>
+			<div class="succes_Send">
+				<h4>
+					Запит надіслано!
+				</h4>
+				<p>
+					Найближчим часом наші фахівці вивчать ваш запит та зв'яжуться з вами. Дякуємо!
+				</p>
+				<a href="#" class="close">
+					Зрозуміло
+				</a>
 			</div>
 		</div>
 	</div>
@@ -154,7 +182,7 @@
 					</li>
 					<li>
 						<a href="#" class="buy_btn">
-							Отримати прайс
+							Зв'язатись з нами
 						</a>
 					</li>
 				</ul>
@@ -553,11 +581,11 @@
 								Заповніть цю форму щоб отримати прайс на нашу продукцію
 							</p>
 							<form>
-								<input type="text" name="fullName" placeholder="ПІБ*" required='required'>
+								<input type="text" name="fullName" placeholder="Як до вас звертатись*" required='required'>
 								<input type="tel" name="phone" placeholder="Номер телефону*" required='required'>
 								<input type="email" placeholder="Email*" name="email" required='required'>
-								<input type="text" placeholder="Компанія*" name="company" required='required'>
-								<input type="text" placeholder="Місто*" name="city" required='required'>
+								<input type="hidden" placeholder="Компанія*" name="company">
+							<input type="hidden" placeholder="Місто*" name="city">
 								<button type="submit">Отримати прайс</button>
 								<label> Підтверджую згоду з <a href="/policy.html" target="_blank" style="text-decoration: underline; margin-left: 4px;">політикою конфіденційноості</a>
 									<input type="checkbox" required='required'>

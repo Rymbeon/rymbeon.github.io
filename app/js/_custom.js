@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	$('body').on('click', '.buy_btn', function (event) {
+		$('.popup#MesForm').css('display', 'flex');
+		$('.popup#MesForm').fadeTo(200, 1);
+		$('body').css('overflow', 'hidden');
+	});
+	$('body').on('click', '.buy_btn_head', function (event) {
 		$('.popup#PriceForm').css('display', 'flex');
 		$('.popup#PriceForm').fadeTo(200, 1);
 		$('body').css('overflow', 'hidden');
